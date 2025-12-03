@@ -50,6 +50,16 @@ Frontend
 - Results are returned to the frontend
 - UI re-renders task list
 
+## Trade-offs
+
+- SQLite is lightweight, file-based, and easy to set up, but does not scale well.
+- Using a repository pattern abstraction instead of direct EF Core Access adds an extra layer, which increases boilerplate. It was chosen to separate concerns and make future DB swaps easier.
+- CORS is enabled for all origins for simplicity, but in production, it should be restricted to specific origins for security.
+- The current system assumes a single user. This reduces complexity but limits production use. This approach was chosen for faster delivery.
+- Uses Material UI instead of custom CSS which increases bundle size but speeds up development with pre-built components.
+- EnsureCreated() is used to auto-create the DB on startup, which is convenient for development but not suitable for production.
+- No Pagination or filtering is implemented, which limits scalability. This was done to keep the initial version simple.
+
 # App Features
 - Create tasks
 - List tasks
