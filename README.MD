@@ -33,8 +33,8 @@ App runs at http://localhost:5173/
 
 Backend 
 - Core -  Business entities & interfaces
-- Database → EF Core DbContext, SQLite configuration, repositories
-- Api → Controllers, DTOs, REST endpoints
+- Database - EF Core DbContext, SQLite configuration, repositories
+- Api - Controllers, DTOs, REST endpoints
 
 Frontend 
 - Components (TaskList, AddTaskForm)
